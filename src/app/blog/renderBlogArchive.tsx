@@ -19,12 +19,12 @@ export const RenderBlogArchive: React.FC<{ posts: Post[] }> = ({ posts }) => {
             type: 'h2',
             children: [
               {
-                text: 'Keep tabs on Payload.',
+                text: 'Stay Updated',
               },
             ],
           },
           {
-            text: 'Here, you’ll find news about feature releases, happenings in the industry, and Payload announcements in general.',
+            text: 'Find news about product releases, happenings in the industry, and announcements.',
           },
         ]}
       />
