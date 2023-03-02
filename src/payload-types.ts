@@ -340,9 +340,34 @@ export interface CaseStudy {
           leadingHeader: {
             [k: string]: unknown
           }[]
-          sliderType: 'quoteSlider' | 'imageSlider'
+          sliderType: 'quoteSlider' | 'imageSlider' | 'imageTextSlider'
           imageSlides: {
             image: string | Media
+            id?: string
+          }[]
+          imageTextSlides: {
+            richText: {
+              [k: string]: unknown
+            }[]
+            image: string | Media
+            link: {
+              type?: 'reference' | 'custom'
+              newTab?: boolean
+              reference:
+                | {
+                    value: string | Page
+                    relationTo: 'pages'
+                  }
+                | {
+                    value: string | Post
+                    relationTo: 'posts'
+                  }
+                | {
+                    value: string | CaseStudy
+                    relationTo: 'case-studies'
+                  }
+              url: string
+            }
             id?: string
           }[]
           quoteSlides: {
@@ -1081,9 +1106,34 @@ export interface Page {
           leadingHeader: {
             [k: string]: unknown
           }[]
-          sliderType: 'quoteSlider' | 'imageSlider'
+          sliderType: 'quoteSlider' | 'imageSlider' | 'imageTextSlider'
           imageSlides: {
             image: string | Media
+            id?: string
+          }[]
+          imageTextSlides: {
+            richText: {
+              [k: string]: unknown
+            }[]
+            image: string | Media
+            link: {
+              type?: 'reference' | 'custom'
+              newTab?: boolean
+              reference:
+                | {
+                    value: string | Page
+                    relationTo: 'pages'
+                  }
+                | {
+                    value: string | Post
+                    relationTo: 'posts'
+                  }
+                | {
+                    value: string | CaseStudy
+                    relationTo: 'case-studies'
+                  }
+              url: string
+            }
             id?: string
           }[]
           quoteSlides: {
@@ -1962,9 +2012,34 @@ export interface ReusableContent {
           leadingHeader: {
             [k: string]: unknown
           }[]
-          sliderType: 'quoteSlider' | 'imageSlider'
+          sliderType: 'quoteSlider' | 'imageSlider' | 'imageTextSlider'
           imageSlides: {
             image: string | Media
+            id?: string
+          }[]
+          imageTextSlides: {
+            richText: {
+              [k: string]: unknown
+            }[]
+            image: string | Media
+            link: {
+              type?: 'reference' | 'custom'
+              newTab?: boolean
+              reference:
+                | {
+                    value: string | Page
+                    relationTo: 'pages'
+                  }
+                | {
+                    value: string | Post
+                    relationTo: 'posts'
+                  }
+                | {
+                    value: string | CaseStudy
+                    relationTo: 'case-studies'
+                  }
+              url: string
+            }
             id?: string
           }[]
           quoteSlides: {

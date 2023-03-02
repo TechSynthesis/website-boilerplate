@@ -15,6 +15,7 @@ import {
   SLIDER,
   STEPS,
   STICKY_HIGHLIGHTS,
+  STICKY_CONTENT,
 } from './blocks'
 import { FORM_FIELDS } from './form'
 import { LINK_FIELDS } from './link'
@@ -77,6 +78,7 @@ export const PAGE = `
           ${SLIDER}
           ${STEPS}
           ${STICKY_HIGHLIGHTS}
+          ${STICKY_CONTENT}
         }
         meta ${META_FIELDS}
         breadcrumbs {

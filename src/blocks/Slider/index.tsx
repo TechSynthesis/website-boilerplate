@@ -8,6 +8,7 @@ import { RichText } from '@components/RichText'
 import { ArrowIcon } from '../../icons/ArrowIcon'
 import { ImageCard } from './ImageCard'
 import { QuoteCard } from './QuoteCard'
+import { ImageTextCard } from './ImageTextCard '
 import { useComputedCSSValues } from '../../providers/ComputedCSSValues'
 
 import classes from './index.module.scss'
@@ -15,6 +16,7 @@ import classes from './index.module.scss'
 const cardTypes = {
   imageSlider: ImageCard,
   quoteSlider: QuoteCard,
+  imageTextSlider: ImageTextCard,
 }
 
 type Props = Extract<Page['layout'][0], { blockType: 'slider' }>
@@ -22,7 +24,19 @@ type Props = Extract<Page['layout'][0], { blockType: 'slider' }>
 export const SliderBlock: React.FC<Props> = ({ sliderFields }) => {
   const { sliderType, useLeadingHeader, leadingHeader } = sliderFields
 
-  const slides = sliderType === 'imageSlider' ? sliderFields.imageSlides : sliderFields.quoteSlides
+  // const slides = sliderType === 'imageSlider' ? sliderFields.imageSlides : sliderFields.quoteSlides
+  let slides
+  switch (sliderType) {
+    case 'imageSlider':
+      slides = sliderFields.imageSlides
+      break
+    case 'imageTextSlider':
+      slides = sliderFields.imageTextSlides
+      break
+    default:
+      slides = sliderFields.quoteSlides
+      break
+  }
 
   if (!slides || slides.length === 0) return null
 

@@ -2,13 +2,11 @@
 
 .homeHero {
   margin-top: calc(-1 * var(--page-padding-top));
-  
 }
 
 .wrap {
   position: relative;
   background: var(--theme-bg);
-  min-height: 100vh !important;
 }
 
 .bg {
@@ -19,7 +17,6 @@
   bottom: 0;
   left: 0;
   overflow: hidden;
-  min-height: 100vh !important;
 
   &:after {
     content: ' ';
@@ -120,14 +117,14 @@
 }
 
 .actions {
-  margin-bottom: calc(var(--base) * 0.5);
+  margin-bottom: calc(var(--base) * 4);
 
   & > *:not(:last-child) {
     margin-bottom: var(--base);
   }
 
   @include mid-break {
-    margin-bottom: calc(var(--base) * 0.5);
+    margin-bottom: calc(var(--base) * 1.5);
   }
 }
 
@@ -159,22 +156,16 @@
     }
   }
 }
-.shortIntro{
-  margin-top: 1.5rem;
-  font-size: 1em;
-  font-color:rgba(255, 255, 255, 0.8);
-}
 
 .adjectives {
   display: flex;
   pointer-events: none;
   margin-bottom: var(--block-spacing);
-  
 }
 
 .adjective {
   display: block;
-  font-size: 20px;
+  font-size: 100px;
   line-height: 1;
   overflow: hidden;
 
@@ -183,24 +174,22 @@
   }
 
   @include large-break {
-    font-size: 20px;
+    font-size: 100px;
   }
 
   @include mid-break {
-    font-size: 2px;
+    font-size: 168px;
   }
 
   @include small-break {
-    font-size: 2px;
+    font-size: 96px;
   }
 }
 
 .padForMedia {
   padding-top: 28.125%; // half of 16x9 ratio
 }
-.bottomPadding {
-  padding-bottom: 2%;
-}
+
 .mediaGutter {
   position: relative;
 }

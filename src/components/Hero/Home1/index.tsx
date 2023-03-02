@@ -27,15 +27,17 @@ export const HomeHero: React.FC<Page['hero']> = ({
       <ThemeProvider theme="dark" className={classes.wrap}>
         <HeaderObserver color="dark">
           <div className={classes.bg}>
-            <div className={classes.bgImage}>
-              <Image
-                priority
-                src="/images/background-gun.png"
-                fill
-                alt="Screenshots of CMW"
-                sizes="191vh" // aspect ratio of png, translates to 100vh
-              />
-            </div>
+            <Marquee gradient={false}>
+              <div className={classes.bgImage}>
+                {/* <Image
+                  priority
+                  src="/images/home-bg.png"
+                  fill
+                  alt="Screenshots of Payload"
+                  sizes="191vh" // aspect ratio of png, translates to 100vh
+                /> */}
+              </div>
+            </Marquee>
           </div>
           <div className={classes.contentWrap}>
             <Gutter>
@@ -44,14 +46,6 @@ export const HomeHero: React.FC<Page['hero']> = ({
                 <div className={classes.sidebar}>
                   {Array.isArray(actions) && (
                     <ul className={classes.actions}>
-                      <p className={classes.shortIntro}>
-                        India’s top manufacturing companies trust CMW for their service cleaning
-                        needs.
-                      </p>
-                      <p className={classes.shortIntro}>
-                        Meet your all-in-one solution – for
-                        <br /> all your cleaning needs – today.
-                      </p>
                       {actions.map(({ link }, i) => {
                         return (
                           <li key={i}>
@@ -61,25 +55,48 @@ export const HomeHero: React.FC<Page['hero']> = ({
                       })}
                     </ul>
                   )}
+
+                  {/* Not going to render buttons until Cloud */}
+                  {/* {Array.isArray(buttons) && (
+                    <ul className={classes.buttons}>
+                      {buttons.map(({ link }, i) => {
+                        return (
+                          <li key={i}>
+                            <CMSLink {...link} />
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  )} */}
                 </div>
               </div>
               <hr />
             </Gutter>
             {Array.isArray(adjectives) && (
-              <div className={classes.adjectives}>
+              <Marquee gradient={false} speed={70} className={classes.adjectives}>
                 {adjectives.map(({ adjective }, i) => (
                   <span key={i} className={classes.adjective}>
                     {adjective}
                   </span>
                 ))}
-              </div>
+              </Marquee>
             )}
-            {/* <Gutter>
-              <div className={classes.bottomPadding} />
-            </Gutter> */}
+            {typeof media === 'object' && (
+              <Gutter>
+                <div className={classes.padForMedia} />
+              </Gutter>
+            )}
           </div>
         </HeaderObserver>
       </ThemeProvider>
+      {typeof media === 'object' && (
+        <Gutter className={classes.mediaGutter}>
+          <Media resource={media} className={classes.media} />
+          <div className={classes.voidSpaceBelowMedia}>
+            <HeaderObserver color={theme} />
+          </div>
+        </Gutter>
+      )}
     </div>
   )
 }

@@ -223,6 +223,11 @@ export const SLIDER = `
       richText
       quoteDate
     }
+    imageTextSlides {
+      image ${MEDIA_FIELDS}
+      richText
+      link ${LINK_FIELDS({ disableAppearance: true, disableLabel: true })}
+    }
   }
 }`
 
@@ -241,7 +246,30 @@ export const STICKY_HIGHLIGHTS = `
   }
 }
 `
-
+// test
+export const STICKY_CONTENT = `
+... on StickyContent {
+  sections {
+    label
+    description
+    id
+  }
+  id
+  blockName
+  blockType
+}
+`
+// export const STICKY_CONTENT = `
+// ...on StickyContent {
+//   blockType
+//   sections{
+//   StickyContent_Sections {
+//     title
+//     description
+//   }
+// }
+// }`
+// end test
 export const STEPS = `
 ...on Steps {
   blockType
