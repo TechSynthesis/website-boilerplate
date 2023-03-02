@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://payloadcms.com
+Host: https://techinverted.com
 
 # Sitemaps
-Sitemap: https://payloadcms.com/sitemap.xml
+Sitemap: https://techinverted.com/sitemap.xml

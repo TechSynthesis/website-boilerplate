@@ -21,8 +21,8 @@ export const fetchGlobals = async (): Promise<{ mainMenu: MainMenu; footer: Foot
   }).then(res => res.json())
 
   return {
-    mainMenu: data.MainMenu,
-    footer: data.Footer,
+    mainMenu: data?.MainMenu,
+    footer: data?.Footer,
   }
 }
 

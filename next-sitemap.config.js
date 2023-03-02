@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://payloadcms.com',
+  siteUrl: process.env.SITE_URL || 'https://techinverted.com',
   generateRobotsTxt: true, // (optional)
   // ...other options
 }

@@ -165,7 +165,7 @@
 
 .adjective {
   display: block;
-  font-size: 288px;
+  font-size: 100px;
   line-height: 1;
   overflow: hidden;
 
@@ -174,7 +174,7 @@
   }
 
   @include large-break {
-    font-size: 240px;
+    font-size: 100px;
   }
 
   @include mid-break {

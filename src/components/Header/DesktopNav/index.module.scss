@@ -28,7 +28,8 @@
   top: -2px;
 
   svg {
-    height: auto;
+    height: min-content;
+
   }
 
   @include large-break {
@@ -41,6 +42,7 @@
 }
 
 .navItems {
+  padding-left: 4rem;
   display: flex;
 
   :local(.navItem) {
@@ -60,43 +62,22 @@
   }
 }
 
-.github {
-  display: flex;
-  color-scheme: none;
-  align-items: center;
-
-  :local(.stars) {
-    vertical-align: middle;
-    margin: 0 0 0 calc(var(--base) * .5);
-  }
-
-  @include large-break {
-    margin-left: auto;
-
-    :local(.stars) {
-      margin-right: var(--base);
-    }
-  }
-}
-
-.githubText {
-  @include large-break {
-    display: none;
-  }
-}
-
-.icons {
-  width: calc(var(--gutter-h) / 2 - var(--base));
+.navCta {
+ width: calc( var(--gutter-h) /2 - var(--base));
+  width: max-content;
   position: absolute;
-  right: calc(-1 * var(--base));
+  right: calc(3*var(--base));
+  // right: 1rem;
   display: flex;
-  justify-content: flex-end;
-  transform: translateX(100%);
-  top: 0;
-  align-items: center;
   
+  align-items: center;
+  justify-content: center;
+  
+  // transform: translateX(100%);
+  top: 0;
+
   > * {
-    margin-right: calc(var(--base) * .5);
+    margin-right: calc(var(--base) * .75);
     line-height: 1;
     
     &:last-child {
@@ -110,4 +91,7 @@
     transform: unset;
     width: auto;
   }
+}
+.ctaItem {
+  margin-right: calc(var(--base) * .75);
 }

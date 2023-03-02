@@ -26,9 +26,11 @@ import { getImplicitPreference, themeLocalStorageKey } from '@root/providers/The
 import { useHeaderTheme } from '@root/providers/HeaderTheme'
 import classes from './index.module.scss'
 
+import { FullLogo } from '@root/graphics/FullLogo'
+
 export const Footer: React.FC<FooterType> = props => {
   const { columns } = props
-  const [itemsUnderLogo, documentationItems] = columns ?? []
+  const [itemsUnderLogo, navColumnTwo, navColumnThree] = columns ?? []
   const { setTheme, theme } = useThemePreference()
   const { setHeaderColor } = useHeaderTheme()
   const selectRef = React.useRef<HTMLSelectElement>(null)
@@ -51,27 +53,29 @@ export const Footer: React.FC<FooterType> = props => {
     }
   }, [])
 
-  if (Array.isArray(itemsUnderLogo?.navItems) && Array.isArray(documentationItems?.navItems)) {
+  if (Array.isArray(itemsUnderLogo?.navItems) && Array.isArray(navColumnTwo?.navItems)) {
     return (
       <footer className={classes.footer}>
         <Gutter>
           <Grid>
             <Cell cols={3} colsM={4}>
               <div className={classes.colHeader}>
-                <PayloadIcon />
+                {/* <PayloadIcon /> */}
+                <FullLogo />
               </div>
 
               <div>
-                {itemsUnderLogo.navItems.map(({ link }, index) => {
+                {itemsUnderLogo?.navItems.map(({ link }, index) => {
                   return <CMSLink key={index} className={classes.link} {...link} />
                 })}
               </div>
             </Cell>
 
-            <Cell cols={4} colsM={4}>
-              <p className={classes.colHeader}>Documentation</p>
-              <div className={classes.col2Items}>
-                {documentationItems?.navItems.map(({ link }, index) => {
+            <Cell cols={4} colsM={5}>
+              <p className={classes.colHeader}></p>
+              {/* <div className={classes.col2Items}> */}
+              <div>
+                {navColumnTwo?.navItems.map(({ link }, index) => {
                   return (
                     <React.Fragment key={index}>
                       <CMSLink className={classes.link} {...link} />
@@ -83,7 +87,11 @@ export const Footer: React.FC<FooterType> = props => {
 
             <Cell cols={5} colsM={6} colsS={8}>
               <p className={`${classes.colHeader} ${classes.thirdColumn}`}>Stay connected</p>
-
+              <div>
+                {navColumnThree?.navItems.map(({ link }, index) => {
+                  return <CMSLink key={index} className={classes.link} {...link} />
+                })}
+              </div>
               <div>
                 <form
                   method="POST"
@@ -104,7 +112,7 @@ export const Footer: React.FC<FooterType> = props => {
 
                   <div className={classes.subscribeAction}>
                     <p className={classes.subscribeDesc}>
-                      Sign up to receive periodic updates and feature releases to your email.
+                      Sign up to receive periodic updates on SEO and development news to your email.
                     </p>
                     <button className={classes.ok} type="submit">
                       OK
@@ -119,7 +127,7 @@ export const Footer: React.FC<FooterType> = props => {
             <Cell cols={3} colsM={5}>
               <div className={classes.socialLinks}>
                 <a
-                  href="https://www.instagram.com/payloadcms/"
+                  href="https://www.instagram.com/techinverted/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.socialIconLink}
@@ -127,7 +135,7 @@ export const Footer: React.FC<FooterType> = props => {
                   <InstagramIcon />
                 </a>
                 <a
-                  href="https://www.youtube.com/channel/UCyrx4Wpd4SBIpqUKlkb6N1Q"
+                  href="https://www.youtube.com/channel/techinverted"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.socialIconLink}
@@ -135,7 +143,7 @@ export const Footer: React.FC<FooterType> = props => {
                   <YoutubeIcon />
                 </a>
                 <a
-                  href="https://twitter.com/payloadcms"
+                  href="https://twitter.com/techinverted"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.socialIconLink}
@@ -143,7 +151,7 @@ export const Footer: React.FC<FooterType> = props => {
                   <TwitterIcon />
                 </a>
                 <a
-                  href="https://www.facebook.com/payloadcms/"
+                  href="https://www.facebook.com/techinverted/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.socialIconLink}
@@ -154,7 +162,7 @@ export const Footer: React.FC<FooterType> = props => {
             </Cell>
 
             <Cell cols={4} colsM={8}>
-              <p className={classes.copyright}>Copyright 2022 Payload CMS, Inc.</p>
+              <p className={classes.copyright}> &copy; {new Date().getFullYear()} TechInverted</p>
             </Cell>
 
             <Cell cols={5} colsM={8} className={classes.themeCell}>

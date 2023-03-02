@@ -3,12 +3,12 @@ import { Cell, Grid } from '@faceless-ui/css-grid'
 import Link from 'next/link'
 import { Gutter } from '@components/Gutter'
 import { MainMenu } from '@root/payload-types'
+import { TwitterIcon } from '@root/graphics/TwitterIcon'
 import { FullLogo } from '../../../graphics/FullLogo'
-import { DiscordIcon } from '../../../graphics/DiscordIcon'
 import { CMSLink } from '../../CMSLink'
 import { DocSearch } from '../Docsearch'
-
 import classes from './index.module.scss'
+import { Button } from '@components/Button'
 
 export const DesktopNav: React.FC<Pick<MainMenu, 'navItems'>> = ({ navItems }) => {
   return (
@@ -25,24 +25,18 @@ export const DesktopNav: React.FC<Pick<MainMenu, 'navItems'>> = ({ navItems }) =
             })}
           </div>
 
-          <div className={classes.github}>
-            <div className={classes.githubText}>Like what we’re doing? Star us on GitHub!</div>
-            <iframe
-              className={classes.stars}
-              src="https://ghbtns.com/github-btn.html?user=payloadcms&repo=payload&type=star&count=true"
-              frameBorder="0"
-              scrolling="0"
-              width="108"
-              height="20"
-              title="GitHub Stars"
+          <div className={classes.navCta}>
+            <Link href="/contact-us" className={classes.ctaItem}>
+              Get In touch
+            </Link>
+            <Button
+              className={classes.ctaItem}
+              appearance="primary"
+              label="Schedule Call"
+              icon="arrow"
+              el={'a'}
+              href="/schedule-call"
             />
-          </div>
-
-          <div className={classes.icons}>
-            <a href="https://discord.com/invite/r6sCXqVk3v" target="_blank" rel="noreferrer">
-              <DiscordIcon />
-            </a>
-            <DocSearch />
           </div>
         </Cell>
       </Grid>

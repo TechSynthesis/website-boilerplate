@@ -18,7 +18,8 @@ const RenderPage: React.FC = () => {
           <Cell cols={8}>
             <h1>Subscribed</h1>
             <LargeBody>
-              Thank you for subscribing. You will now receive regular Payload updates to your email.
+              Thank you for subscribing. You will now receive regular TechInverted updates to your
+              email.
             </LargeBody>
             <br />
             <Button href="/" el="link" label="Back Home" appearance="secondary" />

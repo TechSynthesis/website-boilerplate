@@ -1,7 +1,6 @@
 'use client'
 
 import { CMSLink } from '@components/CMSLink'
-import CreatePayloadApp from '@components/CreatePayloadApp'
 import Image from 'next/image'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
@@ -18,7 +17,7 @@ export const HomeHero: React.FC<Page['hero']> = ({
   richText,
   adjectives,
   actions,
-  // buttons,
+  buttons,
   media,
 }) => {
   const theme = useTheme()
@@ -30,13 +29,13 @@ export const HomeHero: React.FC<Page['hero']> = ({
           <div className={classes.bg}>
             <Marquee gradient={false}>
               <div className={classes.bgImage}>
-                <Image
+                {/* <Image
                   priority
                   src="/images/home-bg.png"
                   fill
                   alt="Screenshots of Payload"
                   sizes="191vh" // aspect ratio of png, translates to 100vh
-                />
+                /> */}
               </div>
             </Marquee>
           </div>
@@ -56,8 +55,8 @@ export const HomeHero: React.FC<Page['hero']> = ({
                       })}
                     </ul>
                   )}
-                  <CreatePayloadApp />
-                  {/* Not going to render buttons until Payload Cloud */}
+
+                  {/* Not going to render buttons until Cloud */}
                   {/* {Array.isArray(buttons) && (
                     <ul className={classes.buttons}>
                       {buttons.map(({ link }, i) => {

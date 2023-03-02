@@ -42,10 +42,7 @@ export const CaseStudiesHighlightBlock: React.FC<Props> = ({
       </Gutter>
       <div className={classes.wrap}>
         <div className={classes.poweredByPayload}>
-          <div className={classes.poweredByPayloadInner}>
-            <PayloadIcon />
-            Powered by Payload
-          </div>
+          <div className={classes.poweredByPayloadInner}>Powered by TechInverted</div>
         </div>
         <div
           className={classes.inner}
