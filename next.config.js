@@ -30,7 +30,7 @@ const nextConfig = withBundleAnalyzer({
       // IMPORTANT: the next lines are for development only
       // keep them commented out unless actively developing local react modules
       // modify their paths according to your local directory
-      'payload-admin-bar': path.join(__dirname, '../payload-admin-bar'),
+      // 'payload-admin-bar': path.join(__dirname, '../payload-admin-bar'),
     }
     return configCopy
   },

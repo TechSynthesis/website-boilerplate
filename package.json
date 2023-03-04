@@ -6,7 +6,7 @@
     "fetchDocs": "node scripts/fetch-docs.mjs",
     "dev": "next dev",
     "nodocs:build": "next build",
-    "build": "yarn fetchDocs && next build",
+    "build": " next build",
     "postbuild": "next-sitemap",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
