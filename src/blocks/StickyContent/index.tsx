@@ -6,7 +6,7 @@ import { Page } from '@root/payload-types'
 import BackgroundColor from '../../components/layout/BackgroundColor'
 import GridContainer from '../../components/layout/GridContainer'
 import Gutter from '../../components/layout/Gutter'
-import Description from './Description'
+// import Description from './Description'
 
 import useStyles, { labelHeight } from './css'
 import useIntersect from '../../hooks/useIntersect'
@@ -86,7 +86,7 @@ export const StickyContent: React.FC<Props> = ({ sections }) => {
           >
             {sections?.map((section, i) => (
               <li key={i}>
-                <Description
+                {/* <Description
                   i={i}
                   active={active}
                   rootPos={pos}
@@ -94,7 +94,7 @@ export const StickyContent: React.FC<Props> = ({ sections }) => {
                   yScrollPos={yScrollPos}
                   content={section.description}
                   setActive={setActive}
-                />
+                /> */}
               </li>
             ))}
           </Cell>
