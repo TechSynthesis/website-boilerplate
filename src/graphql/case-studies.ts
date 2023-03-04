@@ -24,6 +24,7 @@ export const CASE_STUDIES = `
       docs {
         id
         title
+        featuredImage ${MEDIA_FIELDS}
         createdAt
         slug
       }

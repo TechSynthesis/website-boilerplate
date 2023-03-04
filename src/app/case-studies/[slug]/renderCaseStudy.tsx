@@ -27,7 +27,7 @@ export const RenderCaseStudy: React.FC<CaseStudy> = props => {
         <Breadcrumbs
           items={[
             {
-              label: 'Case Studies',
+              label: 'Industry',
               url: `/case-studies`,
             },
             {
@@ -41,7 +41,7 @@ export const RenderCaseStudy: React.FC<CaseStudy> = props => {
           </Cell>
 
           <Cell start={10} cols={3} startS={1} colsS={8} className={classes.visitSiteLink}>
-            <Button
+            {/* <Button
               appearance="default"
               el="a"
               href={url}
@@ -50,15 +50,15 @@ export const RenderCaseStudy: React.FC<CaseStudy> = props => {
               labelStyle="mono"
               icon="arrow"
               fullWidth
-            />
+            /> */}
           </Cell>
         </Grid>
 
-        {typeof featuredImage !== 'string' && (
+        {/* {typeof featuredImage !== 'string' && (
           <div className={classes.featuredMediaWrap}>
             <Media resource={featuredImage} />
           </div>
-        )}
+        )} */}
       </Gutter>
 
       <RenderBlocks blocks={layout} />

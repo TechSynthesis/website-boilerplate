@@ -3,8 +3,8 @@ import * as React from 'react'
 import { Media } from '@components/Media'
 import { Page } from '@root/payload-types'
 import { RichText } from '@components/RichText'
-import classes from './index.module.scss'
 import { CMSLink } from '@components/CMSLink'
+import classes from './index.module.scss'
 
 type Props = Extract<
   Page['layout'][0],

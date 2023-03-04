@@ -27,6 +27,7 @@ import { useHeaderTheme } from '@root/providers/HeaderTheme'
 import classes from './index.module.scss'
 
 import { FullLogo } from '@root/graphics/FullLogo'
+import { LinkedInIcon } from '@root/graphics/LinkedInIcon'
 
 export const Footer: React.FC<FooterType> = props => {
   const { columns } = props
@@ -58,9 +59,8 @@ export const Footer: React.FC<FooterType> = props => {
       <footer className={classes.footer}>
         <Gutter>
           <Grid>
-            <Cell cols={3} colsM={4}>
+            <Cell cols={3} colsM={4} colsL={4}>
               <div className={classes.colHeader}>
-                {/* <PayloadIcon /> */}
                 <FullLogo />
               </div>
 
@@ -127,7 +127,7 @@ export const Footer: React.FC<FooterType> = props => {
             <Cell cols={3} colsM={5}>
               <div className={classes.socialLinks}>
                 <a
-                  href="https://www.instagram.com/techinverted/"
+                  href="https://www.instagram.com/cmwco2technologies"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.socialIconLink}
@@ -135,34 +135,45 @@ export const Footer: React.FC<FooterType> = props => {
                   <InstagramIcon />
                 </a>
                 <a
-                  href="https://www.youtube.com/channel/techinverted"
+                  href="https://www.youtube.com/@cmwco2technologies831"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.socialIconLink}
                 >
                   <YoutubeIcon />
                 </a>
-                <a
-                  href="https://twitter.com/techinverted"
+                {/* <a
+                  href="https://twitter.com/cmw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.socialIconLink}
                 >
                   <TwitterIcon />
-                </a>
+                </a> */}
                 <a
-                  href="https://www.facebook.com/techinverted/"
+                  href="https://www.facebook.com/profile.php?id=223564137818649&paipv=0&eav=AfY8H-6I4tUPO6MCTNdri7zIb2dGdjWux54ZnARVV5d1SgCfHeTs7C9l4Fp9yXEaweU&_rdr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.socialIconLink}
                 >
                   <FacebookIcon />
                 </a>
+                <a
+                  href="https://www.linkedin.com/company/cmw-co2-technologies"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.socialIconLink}
+                >
+                  <LinkedInIcon />
+                </a>
               </div>
             </Cell>
 
             <Cell cols={4} colsM={8}>
-              <p className={classes.copyright}> &copy; {new Date().getFullYear()} TechInverted</p>
+              <p className={classes.copyright}>
+                {' '}
+                &copy; {new Date().getFullYear()} CMW CO2 Technologies
+              </p>
             </Cell>
 
             <Cell cols={5} colsM={8} className={classes.themeCell}>

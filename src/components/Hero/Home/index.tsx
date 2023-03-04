@@ -30,10 +30,10 @@ export const HomeHero: React.FC<Page['hero']> = ({
             <div className={classes.bgImage}>
               <Image
                 priority
-                src="/images/background-gun.png"
+                src="/images/background-gun.jpg"
                 fill
                 alt="Screenshots of CMW"
-                sizes="191vh" // aspect ratio of png, translates to 100vh
+                sizes="210vh" // aspect ratio of png, translates to 100vh 191
               />
             </div>
           </div>
@@ -65,7 +65,7 @@ export const HomeHero: React.FC<Page['hero']> = ({
               </div>
               <hr />
             </Gutter>
-            {Array.isArray(adjectives) && (
+            {/* {Array.isArray(adjectives) && (
               <div className={classes.adjectives}>
                 {adjectives.map(({ adjective }, i) => (
                   <span key={i} className={classes.adjective}>
@@ -73,13 +73,23 @@ export const HomeHero: React.FC<Page['hero']> = ({
                   </span>
                 ))}
               </div>
-            )}
+            )} */}
             {/* <Gutter>
               <div className={classes.bottomPadding} />
             </Gutter> */}
           </div>
         </HeaderObserver>
       </ThemeProvider>
+      <section className={classes.CenteredBrandText}>
+        <div className={classes.textBlock}>
+          <h2 className={classes.gradientText}>CMW is an all-in-one</h2>
+          <h2 className={classes.gradientText}>Solution</h2>
+        </div>
+        <div className={classes.textBlock}>
+          <h2 className={classes.gradientText}>Loved by the leading</h2>
+          <h2 className={classes.gradientText}>Manufacturing Companies in the world.</h2>
+        </div>
+      </section>
     </div>
   )
 }

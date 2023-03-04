@@ -18,12 +18,12 @@
 }
 
 .logo {
-  width: calc(var(--gutter-h) / 2 - var(--base));
+  width: 15rem;
   height: 100%;
   position: absolute;
-  left: calc(-1 * var(--base));
+  left: 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   transform: translateX(-100%);
   top: -2px;
 

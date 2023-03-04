@@ -134,7 +134,10 @@
 
 .slideType--imageSlider {
   min-width: 600px;
-  max-width: 800px;
+  max-width: 1000px;
+  height: 800px;
+  object-fit: contain;
+  overflow-y: hidden;
 
   @include mid-break {
     min-width: 300px;

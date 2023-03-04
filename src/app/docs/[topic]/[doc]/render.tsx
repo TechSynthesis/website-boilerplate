@@ -35,7 +35,7 @@ export const RenderDoc: React.FC<Props> = ({ doc, next }) => {
 
   // Need this until Next #42414 is fixed
   useEffect(() => {
-    document.title = `${title} | Documentation | Payload CMS`
+    document.title = `${title} | Documentation | Tech CMS`
   })
 
   return (

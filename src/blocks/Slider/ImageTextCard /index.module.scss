@@ -45,12 +45,26 @@
 }
 
 .richText {
-  @include large-body;
+  
   position: absolute;
-  bottom: calc(var(--base) + 10px);
-  padding-left: 30px;
+  bottom: calc(8rem);
+  padding-left: 2rem;
   margin-bottom: auto;
-  z-index: 2;
+  font-weight: 500;
+  font-size: 31.4224px;
+  color: white;
+  z-index: 3;
+  line-height: 20px;
+  @include mid-break{
+    padding-left: 0px;
+    bottom: calc(9rem);
+  }
+  @include large-break{
+    padding-left: 0px;
+  }
+  @include extra-large-break {
+    padding-left: 0px;
+  }
 }
 
 .date {

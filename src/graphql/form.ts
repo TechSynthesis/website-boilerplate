@@ -1,4 +1,13 @@
-type Type = 'text' | 'country' | 'state' | 'select' | 'email' | 'textarea' | 'checkbox' | 'radio'
+type Type =
+  | 'text'
+  | 'country'
+  | 'state'
+  | 'select'
+  | 'email'
+  | 'textarea'
+  | 'checkbox'
+  | 'radio'
+  | 'number'
 
 export const FORM_FIELD = (type: Type): string => `{
     id
@@ -8,7 +17,11 @@ export const FORM_FIELD = (type: Type): string => `{
     required
     blockType
     ${
-      type !== 'email' && type !== 'checkbox' && type !== 'country' && type !== 'state'
+      type !== 'email' &&
+      type !== 'checkbox' &&
+      type !== 'country' &&
+      type !== 'state' &&
+      type !== 'number'
         ? `defaultValue`
         : ''
     }
@@ -35,6 +48,7 @@ export const FORM_FIELDS = `{
         ...on Email ${FORM_FIELD('email')}
         ...on Checkbox ${FORM_FIELD('checkbox')}
         ...on Select ${FORM_FIELD('select')}
+        ...on Number ${FORM_FIELD('number')}
         ...on Message {
             message
             id

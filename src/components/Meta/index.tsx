@@ -9,10 +9,9 @@ export type MetaType = {
 }
 
 const defaults = {
-  title: 'Payload CMS | Node & React TypeScript Headless CMS',
-  description:
-    'Headless CMS and application framework built with TypeScript, Node.js, React and MongoDB',
-  image: 'https://payloadcms.com/images/og-image.jpg',
+  title: 'CMW CO2 Technologies',
+  description: 'The future of Dry Ice Cleaning Technology',
+  image: '',
 }
 
 const Meta: React.FC<MetaType> = ({
@@ -35,8 +34,8 @@ const Meta: React.FC<MetaType> = ({
       <meta name="description" content={description} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:url" content={`https://payloadcms.com/${slug}`} />
-      <meta property="og:site_name" content="Payload CMS" />
+      <meta property="og:url" content={`https://cmw-dryice.com/${slug}`} />
+      <meta property="og:site_name" content="Tech Inverted" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:type" content="website" />
     </Fragment>

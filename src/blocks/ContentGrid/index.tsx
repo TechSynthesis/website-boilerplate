@@ -28,7 +28,7 @@ const Cells: React.FC<CellsProps> = ({
       <Grid>
         {cells.map((cell, i) => {
           return (
-            <Cell className={classes.cell} cols={4} colsS={8} key={i}>
+            <Cell className={classes.cell} cols={2} colsS={2} key={i}>
               <RichText className={classes.richText} content={cell.content} />
             </Cell>
           )
