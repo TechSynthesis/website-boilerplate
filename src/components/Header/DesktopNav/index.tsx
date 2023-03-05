@@ -3,12 +3,12 @@ import { Cell, Grid } from '@faceless-ui/css-grid'
 import Link from 'next/link'
 import { Gutter } from '@components/Gutter'
 import { MainMenu } from '@root/payload-types'
-import { TwitterIcon } from '@root/graphics/TwitterIcon'
+// import { TwitterIcon } from '@root/graphics/TwitterIcon'
+import { Button } from '@components/Button'
 import { FullLogo } from '../../../graphics/FullLogo'
 import { CMSLink } from '../../CMSLink'
-import { DocSearch } from '../Docsearch'
+// import { DocSearch } from '../Docsearch'
 import classes from './index.module.scss'
-import { Button } from '@components/Button'
 
 export const DesktopNav: React.FC<Pick<MainMenu, 'navItems'>> = ({ navItems }) => {
   return (

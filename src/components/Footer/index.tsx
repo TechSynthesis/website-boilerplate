@@ -6,14 +6,14 @@ import { Text } from '@forms/fields/Text'
 import { validateEmail } from '@forms/validations'
 import { Gutter } from '@components/Gutter'
 import { ArrowIcon } from '@icons/ArrowIcon'
-import { PayloadIcon } from '@root/graphics/PayloadIcon'
+// import { PayloadIcon } from '@root/graphics/PayloadIcon'
 import { Cell, Grid } from '@faceless-ui/css-grid'
 import { analyticsEvent } from '@root/utilities/analytics'
 import { Footer as FooterType } from '@types'
 
 import { InstagramIcon } from '@root/graphics/InstagramIcon'
 import { YoutubeIcon } from '@root/graphics/YoutubeIcon'
-import { TwitterIcon } from '@root/graphics/TwitterIcon'
+// import { TwitterIcon } from '@root/graphics/TwitterIcon'
 import { FacebookIcon } from '@root/graphics/FacebookIcon'
 import { ThemeAutoIcon } from '@root/graphics/ThemeAutoIcon'
 import { ThemeLightIcon } from '@root/graphics/ThemeLightIcon'
@@ -24,10 +24,10 @@ import { Theme } from '@root/providers/Theme/types'
 import { ChevronUpDownIcon } from '@root/icons/ChevronUpDownIcon'
 import { getImplicitPreference, themeLocalStorageKey } from '@root/providers/Theme/shared'
 import { useHeaderTheme } from '@root/providers/HeaderTheme'
-import classes from './index.module.scss'
 
 import { FullLogo } from '@root/graphics/FullLogo'
 import { LinkedInIcon } from '@root/graphics/LinkedInIcon'
+import classes from './index.module.scss'
 
 export const Footer: React.FC<FooterType> = props => {
   const { columns } = props

@@ -1,7 +1,7 @@
 'use client'
 
 import { CMSLink } from '@components/CMSLink'
-import Image from 'next/image'
+// import Image from 'next/image'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 import { ThemeProvider, useTheme } from '@providers/Theme'
@@ -13,13 +13,7 @@ import { HeaderObserver } from '../../HeaderObserver'
 
 import classes from './index.module.scss'
 
-export const HomeHero: React.FC<Page['hero']> = ({
-  richText,
-  adjectives,
-  actions,
-  buttons,
-  media,
-}) => {
+export const HomeHero: React.FC<Page['hero']> = ({ richText, adjectives, actions, media }) => {
   const theme = useTheme()
 
   return (

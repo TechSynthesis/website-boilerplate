@@ -7,14 +7,15 @@ import { Breadcrumbs } from '@components/Breadcrumbs'
 import { Gutter } from '../../../components/Gutter'
 
 import { RichText } from '../../../components/RichText'
-import { Button } from '../../../components/Button'
-import { Media } from '../../../components/Media'
+// import { Button } from '../../../components/Button'
+// import { Media } from '../../../components/Media'
 import { RenderBlocks } from '../../../components/RenderBlocks'
 
 import classes from './index.module.scss'
 
 export const RenderCaseStudy: React.FC<CaseStudy> = props => {
-  const { title, featuredImage, introContent, layout, url, meta } = props
+  const { title, introContent, layout, meta } = props
+  // const { title, featuredImage, introContent, layout, url, meta } = props
 
   // Need this until Next #42414 is fixed
   React.useEffect(() => {

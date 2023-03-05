@@ -3,24 +3,18 @@
 import { CMSLink } from '@components/CMSLink'
 import Image from 'next/image'
 import React from 'react'
-import Marquee from 'react-fast-marquee'
-import { ThemeProvider, useTheme } from '@providers/Theme'
+// import Marquee from 'react-fast-marquee'
+import { ThemeProvider } from '@providers/Theme'
 import { Gutter } from '@components/Gutter'
-import { Media } from '@components/Media'
+// import { Media } from '@components/Media'
 import { RichText } from '@components/RichText'
 import { Page } from '@root/payload-types'
 import { HeaderObserver } from '../../HeaderObserver'
 
 import classes from './index.module.scss'
 
-export const HomeHero: React.FC<Page['hero']> = ({
-  richText,
-  adjectives,
-  actions,
-  buttons,
-  media,
-}) => {
-  const theme = useTheme()
+export const HomeHero: React.FC<Page['hero']> = ({ richText, actions }) => {
+  // const theme = useTheme()
 
   return (
     <div className={classes.homeHero}>
