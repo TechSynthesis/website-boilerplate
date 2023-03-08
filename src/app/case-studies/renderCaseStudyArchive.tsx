@@ -5,7 +5,7 @@ import { Cell, Grid } from '@faceless-ui/css-grid'
 import { DefaultHero } from '@components/Hero/Default'
 import { BlockSpacing } from '@components/BlockSpacing'
 import { CaseStudy } from '@root/payload-types'
-import { ContentMediaCard } from '@components/cards/ContentMediaCard'
+import { ArchiveMediaCard } from '@components/cards/ArchiveMediaCard'
 import { Gutter } from '@components/Gutter'
 
 import classes from './index.module.scss'
@@ -19,12 +19,12 @@ export const RenderBlogArchive: React.FC<{ posts: CaseStudy[] }> = ({ posts }) =
             type: 'h2',
             children: [
               {
-                text: 'Stay Updated',
+                text: 'Applications',
               },
             ],
           },
           {
-            text: 'Find news about product releases, happenings in the industry, and announcements.',
+            text: 'Innovative Solutions for a wide range of Applications',
           },
         ]}
       />
@@ -34,7 +34,7 @@ export const RenderBlogArchive: React.FC<{ posts: CaseStudy[] }> = ({ posts }) =
             {(posts || []).map(post => {
               return (
                 <Cell key={post.id} cols={3} colsM={4} colsS={8} className={classes.post}>
-                  <ContentMediaCard
+                  <ArchiveMediaCard
                     title={post.title}
                     description={post?.meta?.description}
                     href={`/case-studies/${post.slug}`}

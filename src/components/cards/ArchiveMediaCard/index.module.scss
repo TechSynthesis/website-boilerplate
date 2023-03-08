@@ -1,0 +1,59 @@
+@use '@scss/common' as *;
+
+.blogCard {
+  // margin-bottom: calc(var(--base) * 2);
+  position: relative;
+  display: block;
+  transition: all 200ms ease-out;
+  // padding-top: 56.25%;
+  position: relative;
+  height: 100%;
+  opacity: .9;
+  z-index: 1;
+  height: max-content;
+  &:hover {
+    @include shadow-lg;
+    opacity: 1;
+    transform: translate3d(0, calc(var(--base) * -1), 0);
+  }
+
+  @include mid-break {
+    opacity: 1;
+    transition: none;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.title {
+
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  text-align: center;
+  text-shadow: 0 1px 0 black;
+  font-weight: bold;
+  color: whitesmoke;
+  @include h6;
+
+  @include mid-break {
+    @include h3;
+  }
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.media {
+
+  @include shadow-lg;
+}

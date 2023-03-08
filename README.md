@@ -3,7 +3,7 @@
 This is the repository for TechInverted's official website. We're building it completely in public.
 
 
-This site showcases lots of cool stuff like how to use Payload's GraphQL API to its fullest extent, how to build a super dynamic light / dark mode into a Next site without any first-load flickering, how to render remotely stored docs from MDX to NextJS pages, and much more.  
+This site showcases lots of cool stuff like GraphQL API, a super dynamic light / dark mode into a Next site without any first-load flickering, how to render remotely stored docs from MDX to NextJS pages, and much more.  
 
 ## Tech stack:
 
@@ -16,13 +16,9 @@ This site showcases lots of cool stuff like how to use Payload's GraphQL API to 
 
 #### The CMS
 
-Payload is leveraged for everything that the site does, outside of its documentation which is all stored as Markdown in the Payload repo itself. It's also completely open-source and [can be found here](https://github.com/payloadcms/website-cms). 
+The TechInverted CMS is leveraged for everything that the site does, outside of its documentation which is all stored as Markdown in the  repo itself.
 
-Both this repo and the CMS repo can be used as great examples to learn how to build Payload projects at scale.
 
-#### Payload Cloud
-
-Soon, we'll be launching Payload Cloud, which will be a one-click GitHub integration that handles production deployment for your Payload apps. The entire frontend of Payload Cloud will also be built in public and included within this repo, which is going to be awesome.
 
 ## Running the project locally
 
