@@ -111,6 +111,8 @@
     will-change: opacity;
     position: absolute;
     top: 100%;
+    font-size: small;
+    line-height: 25px;
 
     @include mid-break {
         opacity: 1;
