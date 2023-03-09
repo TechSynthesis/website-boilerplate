@@ -118,6 +118,7 @@
         line-height: 1.25;
         margin-top: calc(var(--base) / 4);
     }
+
 }
 
 .titleWrapper {
@@ -155,7 +156,7 @@
 
 .noLink {
             
-    color: var(--color-base-0);
+    // color: var(--color-base-0);
     &:local() {
     .arrow {
                 opacity: 0;
@@ -165,6 +166,17 @@
             opacity: 0;
         }
     }
+    // .content {
+    //     transform: translate3d(0, calc(var(--base) * 2), 0); // leave room for the leader
+    //     opacity: 1;
+    // }
+
+    // .leader {
+    //     opacity: 1;
+    // }
+    // .titleWrapper{
+    //     opacity: 1;
+    // }
 }
 
 // .noLink {

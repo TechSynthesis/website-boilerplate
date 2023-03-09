@@ -21,12 +21,12 @@
 }
 
 .logo {
-  width: 50px;
+  width: 150px;
+;
 
-  svg {
-    height: min-content !important;
-
-  }
+  // svg {
+  //   height: min-content !important;
+  // }
 
 }
 
@@ -41,8 +41,8 @@
 
 .content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between !important;
+  align-items: center !important;
   position: relative;
   width: 100%;
 

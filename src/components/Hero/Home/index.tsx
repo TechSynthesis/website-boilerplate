@@ -4,7 +4,7 @@ import { CMSLink } from '@components/CMSLink'
 import Image from 'next/image'
 import React from 'react'
 // import Marquee from 'react-fast-marquee'
-import { ThemeProvider } from '@providers/Theme'
+import { ThemeProvider, useTheme } from '@providers/Theme'
 import { Gutter } from '@components/Gutter'
 // import { Media } from '@components/Media'
 import { RichText } from '@components/RichText'
@@ -14,7 +14,7 @@ import { HeaderObserver } from '../../HeaderObserver'
 import classes from './index.module.scss'
 
 export const HomeHero: React.FC<Page['hero']> = ({ richText, actions }) => {
-  // const theme = useTheme()
+  const theme = useTheme()
 
   return (
     <div className={classes.homeHero}>
@@ -74,6 +74,7 @@ export const HomeHero: React.FC<Page['hero']> = ({ richText, actions }) => {
           </div>
         </HeaderObserver>
       </ThemeProvider>
+      <HeaderObserver color={theme} />
       <section className={classes.CenteredBrandText}>
         <div className={classes.textBlock}>
           <h2 className={classes.gradientText}>CMW is an all-in-one</h2>

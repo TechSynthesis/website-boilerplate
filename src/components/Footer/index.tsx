@@ -84,8 +84,17 @@ export const Footer: React.FC<FooterType> = props => {
                 })}
               </div>
             </Cell>
+            <Cell cols={4} colsM={5}>
+              <p className={classes.colHeader}></p>
+              {/* <div className={classes.col2Items}> */}
+              <div>
+                {navColumnThree?.navItems.map(({ link }, index) => {
+                  return <CMSLink key={index} className={classes.link} {...link} />
+                })}
+              </div>
+            </Cell>
 
-            <Cell cols={5} colsM={6} colsS={8}>
+            {/* <Cell cols={5} colsM={6} colsS={8}>
               <p className={`${classes.colHeader} ${classes.thirdColumn}`}>Stay connected</p>
               <div>
                 {navColumnThree?.navItems.map(({ link }, index) => {
@@ -120,7 +129,7 @@ export const Footer: React.FC<FooterType> = props => {
                   </div>
                 </form>
               </div>
-            </Cell>
+            </Cell> */}
           </Grid>
 
           <Grid className={classes.footerMeta}>

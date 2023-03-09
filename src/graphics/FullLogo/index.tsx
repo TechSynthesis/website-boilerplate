@@ -3,8 +3,8 @@ import * as React from 'react'
 export const FullLogo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <svg
-      width="125"
-      height="30"
+      width="150"
+      height="60"
       viewBox="0 0 125 30"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
