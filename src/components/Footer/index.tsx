@@ -2,13 +2,13 @@
 
 import React from 'react'
 import { CMSLink } from '@components/CMSLink'
-import { Text } from '@forms/fields/Text'
-import { validateEmail } from '@forms/validations'
+// import { Text } from '@forms/fields/Text'
+// import { validateEmail } from '@forms/validations'
 import { Gutter } from '@components/Gutter'
-import { ArrowIcon } from '@icons/ArrowIcon'
+// import { ArrowIcon } from '@icons/ArrowIcon'
 // import { PayloadIcon } from '@root/graphics/PayloadIcon'
 import { Cell, Grid } from '@faceless-ui/css-grid'
-import { analyticsEvent } from '@root/utilities/analytics'
+// import { analyticsEvent } from '@root/utilities/analytics'
 import { Footer as FooterType } from '@types'
 
 import { InstagramIcon } from '@root/graphics/InstagramIcon'
