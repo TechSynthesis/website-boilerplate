@@ -98,6 +98,8 @@
 .footerMeta {
   margin-top: calc(var(--base) * 4);
   align-items: flex-end;
+  display: flex !important;
+  justify-content: space-between !important;
 
   @include mid-break {
     margin-top: calc(var(--base) * 2);

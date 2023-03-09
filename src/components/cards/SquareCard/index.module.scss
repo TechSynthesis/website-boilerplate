@@ -40,8 +40,6 @@
     }
 }
 
-
-
 .bg {
     position: absolute;
     width: 100%;
@@ -109,43 +107,17 @@
 .description {
     margin-top: calc(var(--base) / 2);
     opacity: 0;
-    transition: opacity display 0.3s ease-in-out;
-    will-change: opacity display;
-
-    
+    transition: opacity 0.3s ease-in-out;
+    will-change: opacity;
     position: absolute;
     top: 100%;
-    display: none;
-    transform: translateY(100%);
-    @include large-break {
-        opacity: 1;
-        font-size: medium;
-        line-height: 1.25;
-        margin-top: calc(var(--base) / 4);
-    }
-    @include small-break {
+
+    @include mid-break {
         opacity: 1;
         font-size: small;
         line-height: 1.25;
         margin-top: calc(var(--base) / 4);
     }
-}
-
-@media only screen and (max-width: 768px) {
-  .description {
-    display: block;
-  }
-  .card:hover .description {
-    display: block;
-     
-  }
-}
-
-.card:hover .description {
-    display: block;
-  position: absolute;
-    top: 100%;
-    transform: translateY(0);
 }
 
 .titleWrapper {
@@ -155,8 +127,6 @@
 .title {
     @include h5;
     margin: 0 !important;
-    transition: transform 0.1s ease-in-out;
-    transform: translateY(100%);
 
     @include extra-large-break {
       @include h6;
@@ -167,10 +137,6 @@
         line-height: 1.25;
         font-weight: bold;
     }
-}
-.card:hover .title {
-
-  transform: translateY(0);
 }
 
 .arrow {
@@ -188,50 +154,64 @@
 }
 
 .noLink {
+            
     color: var(--color-base-0);
-
     &:local() {
-        .content {
-            top: 0;
-            transform: translate3d(0, calc(var(--base) * 2), 0); // leave room for the leader
-
-            @include mid-break {
-                transform: translate3d(0, var(--base), 0); // leave room for the leader
-            }
-        }
-
-        .description {
-            opacity: 1;
-        }
-
-        .bg {
-            transform: translate3d(0, 0, 0);
-            opacity: 1;
-        }
-    
-        .leader {
-            opacity: 1;
-        }
-
-        .arrow {
-            opacity: 0;
-        }
-    }
-
-
-    &:hover {
-        &:local() {
-            .content {
-                transform: translate3d(0, calc(var(--base) * 2), 0); // leave room for the leader
-            }
-
-            .leader {
-                opacity: 1;
-            }
-
-            .arrow {
+    .arrow {
                 opacity: 0;
             }
         }
+        &:hover {.arrow {
+            opacity: 0;
+        }
     }
 }
+
+// .noLink {
+//     color: var(--color-base-0);
+
+//     &:local() {
+//         .content {
+//             top: 0;
+//             transform: translate3d(0, calc(var(--base) * 2), 0); // leave room for the leader
+
+//             @include mid-break {
+//                 transform: translate3d(0, var(--base), 0); // leave room for the leader
+//             }
+//         }
+
+//         .description {
+//             opacity: 1;
+//         }
+
+//         .bg {
+//             transform: translate3d(0, 0, 0);
+//             opacity: 1;
+//         }
+    
+//         .leader {
+//             opacity: 1;
+//         }
+
+//         .arrow {
+//             opacity: 0;
+//         }
+//     }
+
+
+//     &:hover {
+//         &:local() {
+//             .content {
+//                 transform: translate3d(0, calc(var(--base) * 2), 0); // leave room for the leader
+//             }
+
+//             .leader {
+//                 opacity: 1;
+//             }
+
+//             .arrow {
+//                 opacity: 0;
+//             }
+//         }
+//     }
+// }

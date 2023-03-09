@@ -9,8 +9,8 @@ export type MetaType = {
 }
 
 const defaults = {
-  title: 'CMW CO2 Technologies',
-  description: 'The future of Dry Ice Cleaning Technology',
+  title: `${process.env.WEBSITE_TITLE}`,
+  description: `${process.env.WEBSITE_DECRIPTION}`,
   image: '',
 }
 
