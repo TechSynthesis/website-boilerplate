@@ -133,19 +133,17 @@
 }
 
 .slideType--imageSlider {
-  min-width: 300px;
+  min-width: 600px;
   max-width: 1000px;
   // height: ;
-  display: flex !important;
-  width: fit-content!important;
 
   @include mid-break {
     min-width: 300px;
   }
 }
 .slideType--imageSlider img {
-  max-height: 80vh !important;
-height: auto !important;
+  max-height: 80vh;
+  height: auto;
   object-fit: contain;
 }
 
@@ -169,4 +167,111 @@ height: auto !important;
     min-width: 500px;
   }
 
+}
+
+// Dot Nav
+
+.dots {
+  display: flex;
+  margin-top: calc(var(--base) * 0.5);
+  justify-content: center;
+}
+
+.dot {
+  all: unset;
+  cursor: pointer;
+  width: calc(var(--base) * 0.5);
+  height: calc(var(--base) * 0.5);
+  background-color: var(--color-base-300);
+
+  &:not(:last-child) {
+    margin-right: calc(var(--base) * 0.25);
+  }
+
+  &:hover {
+    background-color: var(--color-base-400);
+  }
+
+  @include mid-break {
+    &:hover {
+      background-color: var(--color-base-300); // disable hover on mobile
+    }
+  }
+}
+
+.dotIsActive {
+  background-color: var(--color-base-500);
+}
+
+:global(.isDark) {
+  &:local() {
+    .slide {
+      background-color: var(--color-base-700);
+
+      &:nth-child(even) {
+        background-color: var(--color-base-800);
+      }
+    }
+
+    .dot {
+      background-color: var(--color-base-500);
+
+      &:hover {
+        background-color: var(--color-base-400);
+      }
+
+      @include mid-break {
+        &:hover {
+           background-color: var(--color-base-400); // disable hover on mobile
+        }
+      }
+    }
+
+    .dotIsActive {
+      background-color: white ;
+    }
+  }
+}
+
+//thumbnails
+
+.track {
+  width: 100%;
+  height: 100px;
+  padding-bottom: calc(var(--base) * 0.5);
+}
+
+.slide {
+  padding: base();
+  background-color: var(--color-base-200);
+  text-align: center;
+
+  &:nth-child(even) {
+    background-color: var(--color-base-300);
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
+}
+
+:global(.isDark) {
+  &:local() {
+    .slide {
+      background-color: var(--color-base-700);
+
+      &:nth-child(even) {
+        background-color: var(--color-base-800);
+      }
+    }
+  }
+}
+
+.track {
+  width: 100%;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

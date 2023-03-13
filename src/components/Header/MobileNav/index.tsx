@@ -77,7 +77,7 @@ export const MobileNav: React.FC<NavItems> = props => {
               </Link>
 
               <div className={classes.icons}>
-                <DocSearch />
+                {/* <DocSearch /> */}
 
                 <button type="button" className={classes.modalToggler} onClick={toggleModal}>
                   <MenuIcon />

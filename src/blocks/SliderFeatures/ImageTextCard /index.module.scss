@@ -1,0 +1,90 @@
+@use '@scss/common' as *;
+
+
+
+.featureCard {
+  @include large-body;
+  // padding: calc(var(--base) * 4);
+  // background-color: var(--color-base-950);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  
+
+
+  // @include extra-large-break {
+  //   @include body;
+  //   padding: calc(var(--base) * 2.25);
+  // }
+
+  // @include mid-break {
+  //   padding: calc(var(--base));
+  // }
+}
+.featureImage { 
+  width: 100%;
+  max-width: 12rem;
+  height: min-content;
+  margin-top: 0px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+
+}
+.featureCard img{
+  display: block;
+  opacity: 1;
+  width: 192px;
+  height: 192px;
+  object-fit: contain;
+
+}
+
+
+.icon {
+  margin-bottom: var(--base);
+
+  @include mid-break {
+    max-width: 25px;
+    margin-bottom: calc(var(--base) / 2);
+  }
+}
+
+.richText {
+  
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  color: --color-base-700;
+  line-height: 1.16;
+  font-size: 1rem;
+  max-width: 20rem;
+  padding-top: 0px;
+  padding-right: 1rem;
+  padding-bottom: 0px;
+  padding-left: 1rem;
+  @include mid-break{
+    padding-left: 0px;
+    bottom: calc(9rem);
+  }
+  // @include large-break{
+  //   padding-left: 0px;
+  // }
+  // @include extra-large-break {
+  //   padding-left: 0px;
+  // }
+}
+
+.date {
+  @include body;
+  display: block;
+  margin-top: calc(var(--base) * 2);
+
+  @include extra-large-break {
+    font-size: initial;
+  }
+}

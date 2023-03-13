@@ -1,0 +1,70 @@
+@use '@scss/common.scss' as *;
+.card {
+    position: relative;
+    border: 1px solid var(--theme-elevation-500);
+    background-color: var(--theme-bg);
+    display: flex;
+    flex-direction: row;
+    height: min-content !important;
+    // justify-content: space-between;
+    overflow: hidden;
+  margin-bottom: 20px; //temp setup 
+    // @include mid-break {
+    //   color: var(--color-base-0);
+    // }
+    
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: calc(var(--base) * 2) ;
+
+  }
+  
+  .content {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--base);
+  }
+  
+
+  
+  .titleWrapper {
+    position: relative;
+  }
+  
+  .title {
+    @include h5;
+    margin: 0 !important;
+  
+    @include extra-large-break {
+      @include h6;
+    }
+  
+    // @include mid-break {
+    //   font-size: medium;
+    //   line-height: 1.25;
+    //   font-weight: bold;
+    // }
+  }
+  
+  .description {
+    margin-top: calc(var(--base) / 2);
+    font-size: medium;
+    line-height: 22px;
+
+    // @include mid-break {
+    //     font-size: medium;
+    //     line-height: 1.25;
+    //     margin-top: calc(var(--base) / 2);
+    // }
+
+}
+.spacer {
+    flex-grow: 1;
+    height: calc(var(--base) * 2);
+    flex-shrink: 0;
+}

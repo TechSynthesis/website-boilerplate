@@ -16,3 +16,10 @@ export interface BlogCardProps extends SharedProps {
   media: Media | string
   href: string
 }
+
+export interface FeatureGridProps extends SharedProps {
+  leader?: string
+  link: CMSLinkType
+  iconImage?: Media | string
+  key: number
+}

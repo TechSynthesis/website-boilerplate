@@ -1,0 +1,58 @@
+@use '@scss/common.scss' as *;
+.card {
+    position: relative;
+    // border: 1px solid var(--theme-elevation-500);
+    background-color: var(--theme-bg);
+    // display: flex;
+    // flex-direction: row;
+    height: min-content !important;
+
+    overflow: hidden;
+
+  }
+  
+
+  
+  .content {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--base);
+    justify-content: center; /* center content vertically */
+  align-items: center; /* center content horizontally */
+  width: 100%;
+  }
+  
+  .icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: calc(var(--base) * 4) ;
+
+  }
+  
+  .titleWrapper {
+    position: relative;
+  }
+  
+  .title {
+    @include h5;
+    margin: 0 !important;
+  
+    @include extra-large-break {
+      @include h6;
+    }
+  }
+  
+  .description {
+    margin-top: calc(var(--base) / 2);
+    font-size: medium;
+    line-height: 22px;
+
+
+}
+.spacer {
+    flex-grow: 1;
+    height: calc(var(--base) * 2);
+    flex-shrink: 0;
+}

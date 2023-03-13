@@ -86,6 +86,45 @@ export const CARD_GRID = `
 }
 `
 
+export const FEATURE_GRID = `
+...on FeatureGrid {
+  blockType
+  featureGridFields {
+    richText
+    links {
+      link ${LINK_FIELDS({ disableAppearance: true })}
+    }
+    cards {
+      title
+      description
+      enableLink
+      link ${LINK_FIELDS({ disableLabel: true })}
+      cardIcon ${MEDIA_FIELDS}
+    }
+    productPhoto ${MEDIA_FIELDS}
+  }
+}
+`
+
+export const PRODUCT_FEATURES = `
+...on ProductFeatures {
+  blockType
+  productFeaturesFields {
+    richText
+    links {
+      link ${LINK_FIELDS({ disableAppearance: true })}
+    }
+    cards {
+      title
+      description
+      enableLink
+      link ${LINK_FIELDS({ disableAppearance: true, disableLabel: true })}
+      cardIcon ${MEDIA_FIELDS}
+    }
+  }
+}
+`
+
 export const CASE_STUDIES_HIGHLIGHT = `
 ...on CaseStudiesHighlight {
   blockType

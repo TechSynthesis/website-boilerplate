@@ -14,6 +14,7 @@ import {
   SLIDER,
   STEPS,
   STICKY_HIGHLIGHTS,
+  FEATURE_GRID,
 } from './blocks'
 import { MEDIA_FIELDS } from './media'
 import { META_FIELDS } from './meta'
@@ -58,6 +59,7 @@ export const CASE_STUDY = `
           ${SLIDER}
           ${STEPS}
           ${STICKY_HIGHLIGHTS}
+          ${FEATURE_GRID}
         }
         meta ${META_FIELDS}
       }

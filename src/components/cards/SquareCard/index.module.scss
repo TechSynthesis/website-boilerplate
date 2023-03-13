@@ -68,7 +68,7 @@
     transform: translate3d(0, -100%, 0);
     will-change: opacity, transform;
     transition: all 0.3s ease-in-out;
-    padding: calc(var(--base) * 2);
+    padding: calc(var(--base) * 1.1);
 
     @include mid-break {
         top: 0;
@@ -111,12 +111,12 @@
     will-change: opacity;
     position: absolute;
     top: 100%;
-    font-size: small;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 22px;
 
     @include mid-break {
         opacity: 1;
-        font-size: small;
+        font-size: large;
         line-height: 1.25;
         margin-top: calc(var(--base) / 4);
     }
@@ -136,7 +136,7 @@
     }
 
     @include mid-break {
-        font-size: small;
+        font-size: medium;
         line-height: 1.25;
         font-weight: bold;
     }

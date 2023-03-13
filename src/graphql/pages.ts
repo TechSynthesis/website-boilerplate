@@ -16,6 +16,8 @@ import {
   STEPS,
   STICKY_HIGHLIGHTS,
   STICKY_CONTENT,
+  FEATURE_GRID,
+  PRODUCT_FEATURES,
 } from './blocks'
 import { FORM_FIELDS } from './form'
 import { LINK_FIELDS } from './link'
@@ -79,6 +81,8 @@ export const PAGE = `
           ${STEPS}
           ${STICKY_HIGHLIGHTS}
           ${STICKY_CONTENT}
+          ${FEATURE_GRID}
+          ${PRODUCT_FEATURES}
         }
         meta ${META_FIELDS}
         breadcrumbs {

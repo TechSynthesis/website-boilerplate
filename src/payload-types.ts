@@ -27,7 +27,7 @@ export interface CaseStudy {
   introContent: {
     [k: string]: unknown
   }[]
-  featuredImage: string | Media
+  featuredImage?: string | Media
   layout: (
     | {
         ctaFields: {
@@ -225,7 +225,7 @@ export interface CaseStudy {
           highlights: {
             title: string
             description: string
-            media: string | Media
+            media?: string | Media
             enableLink?: boolean
             link: {
               type?: 'reference' | 'custom'
@@ -457,7 +457,7 @@ export interface CaseStudy {
                     highlights: {
                       title: string
                       description: string
-                      media: string | Media
+                      media?: string | Media
                       enableLink?: boolean
                       link: {
                         type?: 'reference' | 'custom'
@@ -772,6 +772,26 @@ export interface Page {
         blockType: 'accordion'
       }
     | {
+        bannerFields: {
+          type?: 'default' | 'success' | 'warning' | 'error'
+          addCheckmark?: boolean
+          content: {
+            [k: string]: unknown
+          }[]
+        }
+        id?: string
+        blockName?: string
+        blockType: 'banner'
+      }
+    | {
+        blogMarkdownFields: {
+          markdown: string
+        }
+        id?: string
+        blockName?: string
+        blockType: 'blogMarkdown'
+      }
+    | {
         ctaFields: {
           richText: {
             [k: string]: unknown
@@ -973,6 +993,122 @@ export interface Page {
         blockType: 'form'
       }
     | {
+        featureGridFields: {
+          richText: {
+            [k: string]: unknown
+          }[]
+          links: {
+            link: {
+              type?: 'reference' | 'custom'
+              newTab?: boolean
+              reference:
+                | {
+                    value: string | Page
+                    relationTo: 'pages'
+                  }
+                | {
+                    value: string | Post
+                    relationTo: 'posts'
+                  }
+                | {
+                    value: string | CaseStudy
+                    relationTo: 'case-studies'
+                  }
+              url: string
+              label: string
+            }
+            id?: string
+          }[]
+          cards: {
+            title: string
+            description?: string
+            enableLink?: boolean
+            link: {
+              type?: 'reference' | 'custom'
+              newTab?: boolean
+              reference:
+                | {
+                    value: string | Page
+                    relationTo: 'pages'
+                  }
+                | {
+                    value: string | Post
+                    relationTo: 'posts'
+                  }
+                | {
+                    value: string | CaseStudy
+                    relationTo: 'case-studies'
+                  }
+              url: string
+              appearance?: 'default' | 'primary' | 'secondary'
+            }
+            cardIcon?: string | Media
+            id?: string
+          }[]
+          productPhoto: string | Media
+        }
+        id?: string
+        blockName?: string
+        blockType: 'featureGrid'
+      }
+    | {
+        productFeaturesFields: {
+          richText: {
+            [k: string]: unknown
+          }[]
+          links: {
+            link: {
+              type?: 'reference' | 'custom'
+              newTab?: boolean
+              reference:
+                | {
+                    value: string | Page
+                    relationTo: 'pages'
+                  }
+                | {
+                    value: string | Post
+                    relationTo: 'posts'
+                  }
+                | {
+                    value: string | CaseStudy
+                    relationTo: 'case-studies'
+                  }
+              url: string
+              label: string
+            }
+            id?: string
+          }[]
+          cards: {
+            title: string
+            description?: string
+            enableLink?: boolean
+            link: {
+              type?: 'reference' | 'custom'
+              newTab?: boolean
+              reference:
+                | {
+                    value: string | Page
+                    relationTo: 'pages'
+                  }
+                | {
+                    value: string | Post
+                    relationTo: 'posts'
+                  }
+                | {
+                    value: string | CaseStudy
+                    relationTo: 'case-studies'
+                  }
+              url: string
+            }
+            cardIcon: string | Media
+            id?: string
+          }[]
+        }
+        id?: string
+        blockName?: string
+        blockType: 'productFeatures'
+      }
+    | {
         hoverHighlightsFields: {
           richText: {
             [k: string]: unknown
@@ -981,7 +1117,7 @@ export interface Page {
           highlights: {
             title: string
             description: string
-            media: string | Media
+            media?: string | Media
             enableLink?: boolean
             link: {
               type?: 'reference' | 'custom'
@@ -1223,7 +1359,7 @@ export interface Page {
                     highlights: {
                       title: string
                       description: string
-                      media: string | Media
+                      media?: string | Media
                       enableLink?: boolean
                       link: {
                         type?: 'reference' | 'custom'
@@ -1905,7 +2041,7 @@ export interface ReusableContent {
           highlights: {
             title: string
             description: string
-            media: string | Media
+            media?: string | Media
             enableLink?: boolean
             link: {
               type?: 'reference' | 'custom'
@@ -2129,7 +2265,7 @@ export interface ReusableContent {
                     highlights: {
                       title: string
                       description: string
-                      media: string | Media
+                      media?: string | Media
                       enableLink?: boolean
                       link: {
                         type?: 'reference' | 'custom'

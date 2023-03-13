@@ -24,6 +24,8 @@ import { toKebabCase } from '@utilities/to-kebab-case'
 import { Page, ReusableContent } from '@root/payload-types'
 import { LinkGrid } from '@blocks/LinkGrid'
 import { ReusableContentBlock } from '@blocks/ReusableContent'
+import { FeatureGrid } from '@blocks/FeatureGrid'
+import { ProductFeatures } from '@blocks/ProductFeatures'
 
 type ReusableContentBlockType = Extract<Page['layout'][0], { blockType: 'reusableContentBlock' }>
 
@@ -40,6 +42,7 @@ const blockComponents = {
   form: FormBlock,
   slider: Slider,
   cardGrid: CardGrid,
+  featureGrid: FeatureGrid,
   mediaContent: MediaContent,
   steps: Steps,
   stickyHighlights: StickyHighlights,
@@ -48,6 +51,7 @@ const blockComponents = {
   cta: CallToAction,
   linkGrid: LinkGrid,
   reusableContentBlock: ReusableContentBlock,
+  productFeatures: ProductFeatures,
 }
 
 type Props = {

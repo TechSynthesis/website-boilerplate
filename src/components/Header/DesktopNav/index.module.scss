@@ -45,6 +45,7 @@
   align-items: center !important;
   position: relative;
   width: 100%;
+  flex-wrap: wrap;
 
   // @include large-break {
   //   justify-content: unset;
@@ -79,6 +80,9 @@
     transform: unset;
     width: auto;
   }
+  @media  (max-width: 1114px) {
+    display: none !important;
+  } 
 }
 .ctaItem {
   margin-right: calc(var(--base) * .75);
