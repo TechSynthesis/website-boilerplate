@@ -6,7 +6,6 @@ import { PixelBackground } from '@components/PixelBackground'
 import { Page } from '@root/payload-types'
 import { RichText } from '@components/RichText'
 import { Media } from '@components/Media'
-import { FeatureSlider } from '@blocks/ProductFeatures'
 import { ArrowIcon } from '../../icons/ArrowIcon'
 import { ImageCard } from './ImageCard'
 import { QuoteCard } from './QuoteCard'
@@ -123,7 +122,6 @@ export const SliderBlock: React.FC<Props> = ({ sliderFields, setSliderIndex }) =
           </Grid>
         </Gutter>
       )}
-      <FeatureSlider />
     </div>
   )
 }
