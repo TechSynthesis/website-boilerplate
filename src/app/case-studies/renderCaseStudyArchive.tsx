@@ -33,7 +33,7 @@ export const RenderBlogArchive: React.FC<{ posts: CaseStudy[] }> = ({ posts }) =
           <Grid>
             {(posts || []).map(post => {
               return (
-                <Cell key={post.id} cols={3} colsM={4} colsS={8} className={classes.post}>
+                <Cell key={post.id} cols={4} colsM={4} colsS={8} className={classes.post}>
                   <ArchiveMediaCard
                     title={post.title}
                     description={post?.meta?.description}

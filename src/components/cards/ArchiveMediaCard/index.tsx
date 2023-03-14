@@ -11,18 +11,15 @@ export const ArchiveMediaCard: React.FC<BlogCardProps> = props => {
   return (
     <div className={[classes.blogCard, className && className].filter(Boolean).join(' ')}>
       {typeof media !== 'string' && (
-        <Link href={href}>
+        <Link href={href} className={classes.blogCardInner}>
           <Media
             resource={media}
             className={classes.media}
             sizes="(max-width: 768px) 100vw, 20vw"
           />
+          <span className={classes.title}>{title}</span>
         </Link>
       )}
-
-      <Link href={href} className={classes.title}>
-        {title}
-      </Link>
 
       <p>{description}</p>
     </div>

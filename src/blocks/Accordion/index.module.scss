@@ -1,0 +1,168 @@
+@use "@scss/common" as *;
+
+
+.hr {
+    margin: 0;
+    margin-bottom: calc(var(--base) * 4);
+    border-color: currentColor;
+
+    @include mid-break {
+        margin-bottom: calc(var(--base) * 2);
+    }
+}
+
+.richText {
+    margin-bottom: calc(var(--base) * 3);
+    @include mid-break {
+        margin-bottom: var(--base);
+    }
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    
+
+    button{
+        text-align: left;
+        width: max-content;
+        background-color: transparent;
+        border: none;
+        display: inline-flex;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 1.515789rem;
+        color: rgb(125, 125, 125);
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 5px;
+        transition-duration: 75ms;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+        transition-property: all;
+    }
+    button{
+        margin-right: 2rem !important;
+    }
+
+    
+    }
+
+    .buttonActive button{
+        color: var(--theme-text);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--theme-text);
+        }
+
+    .accordionToggler{
+        width: 100% !important;
+        align-items: center;
+        background-color: var(--theme-bg);
+        border:1px solid var(--theme-elevation-500);
+        color: currentColor;
+        cursor: pointer;
+        display: flex;
+        font-size: var(--base);
+        font-weight: 600;
+        justify-content: space-between;
+        letter-spacing: inherit;
+        line-height: inherit;
+        margin: unset;
+        padding: 1.32rem;
+        text-align: left; 
+        margin-bottom: 0.2rem;
+    }
+
+    .accordionContent{
+        box-sizing: border-box;
+        color: currentColor;
+        grid-column-end: span 10;
+        grid-column-start: 2;
+        line-height: 36px;
+        min-width: 0px;
+        margin: 0 2px 0 2px;
+        transition: background-color 0.3s ease-in-out , padding 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        padding: none;
+        opacity: 0;
+        background-color: none;
+    }
+    .accordionContentIsOpen{
+        padding: var(--base);
+        background-color:  var(--theme-bg);
+        margin-bottom: 1rem;
+        opacity: 1;
+        border:1px solid var(--theme-elevation-500);
+    }
+
+// .modal {
+//     height: 100%;
+//     width: 100%;
+//     padding: 0;
+//     border: none;
+//     background-color: rgba(0, 0, 0, 0.75);
+//     will-change: opacity;
+//     transition: opacity var(--modal-trans-time) linear;
+//     opacity: 0;
+  
+//     &:global(.modal-item--appearActive),
+//     &:global(.modal-item--appearDone),
+//     &:global(.modal-item--enterActive),
+//     &:global(.modal-item--enterDone) {
+//       opacity: 1;
+//       &:local() {
+//         .wrapper {
+//           transform: translate3d(0, 0, 0);
+//         }
+//       }
+//     }
+  
+//     &:global(.modal-item--exitActive),
+//     &:global(.modal-item--exitDone) {
+//       opacity: 0;
+//       &:local() {
+//         .wrapper {
+//           transform: translate3d(base(2), 0, 0);
+//         }
+//       }
+//     }
+//   }
+  
+//   .wrapper {
+//     width: 400px;
+//     background-color: white;
+//     padding: base();
+//     margin-right: 0;
+//     margin-left: auto;
+//     height: 100%;
+//     transform: translate3d(base(2), 0, 0);
+//     will-change: transform;;
+//     transition: transform var(--modal-trans-time) linear;
+  
+//     @include mid-break {
+//       width: calc(100% - #{base(3)});
+//     }
+//   }
+  
+//   .close {
+//     color: white;
+//     cursor: pointer;
+//     margin-bottom: base(0.5);
+//   }
+  
+//   .content {
+//     color: var(--color-html);
+//   }
+  
+//   :global(.isDark) {
+//     &:local() {
+//       .wrapper {
+//         background-color: var(--color-gray-8);
+//       }
+//     }
+//   }

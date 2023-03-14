@@ -15,6 +15,7 @@ import {
   STEPS,
   STICKY_HIGHLIGHTS,
   FEATURE_GRID,
+  ACCORDION,
 } from './blocks'
 import { MEDIA_FIELDS } from './media'
 import { META_FIELDS } from './meta'
@@ -44,6 +45,7 @@ export const CASE_STUDY = `
         slug
         url
         layout {
+          ${ACCORDION}
           ${CALL_TO_ACTION}
           ${CARD_GRID}
           ${CASE_STUDIES_HIGHLIGHT}

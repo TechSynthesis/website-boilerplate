@@ -18,6 +18,7 @@ import {
   STICKY_CONTENT,
   FEATURE_GRID,
   PRODUCT_FEATURES,
+  ACCORDION,
 } from './blocks'
 import { FORM_FIELDS } from './form'
 import { LINK_FIELDS } from './link'
@@ -64,6 +65,7 @@ export const PAGE = `
           form ${FORM_FIELDS}
         }
         layout {
+          ${ACCORDION}
           ${CALL_TO_ACTION}
           ${CARD_GRID}
           ${CASE_STUDIES_HIGHLIGHT}

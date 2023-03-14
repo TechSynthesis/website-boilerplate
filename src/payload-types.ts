@@ -30,6 +30,46 @@ export interface CaseStudy {
   featuredImage?: string | Media
   layout: (
     | {
+        accordionFields: {
+          richText: {
+            [k: string]: unknown
+          }[]
+          tabs: {
+            tabTitle: string
+            accordion: {
+              label: string
+              answer: {
+                [k: string]: unknown
+              }[]
+              enableLink?: boolean
+              link: {
+                type?: 'reference' | 'custom'
+                newTab?: boolean
+                reference:
+                  | {
+                      value: string | Page
+                      relationTo: 'pages'
+                    }
+                  | {
+                      value: string | Post
+                      relationTo: 'posts'
+                    }
+                  | {
+                      value: string | CaseStudy
+                      relationTo: 'case-studies'
+                    }
+                url: string
+              }
+              id?: string
+            }[]
+            id?: string
+          }[]
+        }
+        id?: string
+        blockName?: string
+        blockType: 'accordion'
+      }
+    | {
         ctaFields: {
           richText: {
             [k: string]: unknown
@@ -806,6 +846,46 @@ export interface Page {
   }
   layout: (
     | {
+        accordionFields: {
+          richText: {
+            [k: string]: unknown
+          }[]
+          tabs: {
+            tabTitle: string
+            accordion: {
+              label: string
+              answer: {
+                [k: string]: unknown
+              }[]
+              enableLink?: boolean
+              link: {
+                type?: 'reference' | 'custom'
+                newTab?: boolean
+                reference:
+                  | {
+                      value: string | Page
+                      relationTo: 'pages'
+                    }
+                  | {
+                      value: string | Post
+                      relationTo: 'posts'
+                    }
+                  | {
+                      value: string | CaseStudy
+                      relationTo: 'case-studies'
+                    }
+                url: string
+              }
+              id?: string
+            }[]
+            id?: string
+          }[]
+        }
+        id?: string
+        blockName?: string
+        blockType: 'accordion'
+      }
+    | {
         bannerFields: {
           type?: 'default' | 'success' | 'warning' | 'error'
           addCheckmark?: boolean
@@ -816,14 +896,6 @@ export interface Page {
         id?: string
         blockName?: string
         blockType: 'banner'
-      }
-    | {
-        blogMarkdownFields: {
-          markdown: string
-        }
-        id?: string
-        blockName?: string
-        blockType: 'blogMarkdown'
       }
     | {
         ctaFields: {
@@ -1528,6 +1600,46 @@ export interface Post {
   }[]
   content: (
     | {
+        accordionFields: {
+          richText: {
+            [k: string]: unknown
+          }[]
+          tabs: {
+            tabTitle: string
+            accordion: {
+              label: string
+              answer: {
+                [k: string]: unknown
+              }[]
+              enableLink?: boolean
+              link: {
+                type?: 'reference' | 'custom'
+                newTab?: boolean
+                reference:
+                  | {
+                      value: string | Page
+                      relationTo: 'pages'
+                    }
+                  | {
+                      value: string | Post
+                      relationTo: 'posts'
+                    }
+                  | {
+                      value: string | CaseStudy
+                      relationTo: 'case-studies'
+                    }
+                url: string
+              }
+              id?: string
+            }[]
+            id?: string
+          }[]
+        }
+        id?: string
+        blockName?: string
+        blockType: 'accordion'
+      }
+    | {
         bannerFields: {
           type?: 'default' | 'success' | 'warning' | 'error'
           addCheckmark?: boolean
@@ -1744,6 +1856,46 @@ export interface ReusableContent {
   id: string
   title: string
   layout: (
+    | {
+        accordionFields: {
+          richText: {
+            [k: string]: unknown
+          }[]
+          tabs: {
+            tabTitle: string
+            accordion: {
+              label: string
+              answer: {
+                [k: string]: unknown
+              }[]
+              enableLink?: boolean
+              link: {
+                type?: 'reference' | 'custom'
+                newTab?: boolean
+                reference:
+                  | {
+                      value: string | Page
+                      relationTo: 'pages'
+                    }
+                  | {
+                      value: string | Post
+                      relationTo: 'posts'
+                    }
+                  | {
+                      value: string | CaseStudy
+                      relationTo: 'case-studies'
+                    }
+                url: string
+              }
+              id?: string
+            }[]
+            id?: string
+          }[]
+        }
+        id?: string
+        blockName?: string
+        blockType: 'accordion'
+      }
     | {
         bannerFields: {
           type?: 'default' | 'success' | 'warning' | 'error'

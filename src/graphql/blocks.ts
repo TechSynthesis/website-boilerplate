@@ -2,6 +2,24 @@ import { FORM_FIELDS } from './form'
 import { LINK_FIELDS } from './link'
 import { MEDIA_FIELDS } from './media'
 
+export const ACCORDION = `
+...on Accordion {
+  blockType
+  accordionFields {
+    richText
+    tabs {
+      tabTitle
+      accordion{
+        label
+        answer
+        enableLink
+        link ${LINK_FIELDS({ disableAppearance: true, disableLabel: true })}
+      }
+    }
+  }
+}
+`
+
 export const BANNER = `
 ...on Banner {
   blockType

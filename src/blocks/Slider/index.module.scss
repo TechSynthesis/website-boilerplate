@@ -116,7 +116,7 @@
 
 .pixelContainer {
   position: absolute;
-  left: 0;
+  left: calc(40 * var(--pixel-extension-left));
   right: 0;
   height: calc(100% + var(--pixel-extension-total));
   top: calc(-1 * var(--pixel-extension-top));
@@ -134,19 +134,21 @@
 
 .slideType--imageSlider {
   min-width: 300px;
-  max-width: 1000px;
-  // height: ;
+  // max-width: 1000px;
+  height: 80vh;
   display: flex !important;
-  width: fit-content!important;
+  width: max-content!important;
 
   @include mid-break {
     min-width: 300px;
   }
 }
 .slideType--imageSlider img {
-  max-height: 80vh !important;
-height: auto !important;
-  object-fit: contain;
+  max-height: 100% !important;
+  height: 80vh !important;
+  object-fit: fill;
+  width: fit-content;
+  aspect-ratio: none !important;
 }
 
 .slideType--quoteSlider {

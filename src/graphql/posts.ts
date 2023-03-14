@@ -1,4 +1,4 @@
-import { BANNER, BLOG_CONTENT, BLOG_MARKDOWN, CODE_BLOCK, MEDIA_BLOCK } from './blocks'
+import { ACCORDION, BANNER, BLOG_CONTENT, BLOG_MARKDOWN, CODE_BLOCK, MEDIA_BLOCK } from './blocks'
 import { MEDIA_FIELDS } from './media'
 import { META_FIELDS } from './meta'
 
@@ -52,6 +52,7 @@ export const POST = `
         createdAt
         publishedOn
         content {
+          ${ACCORDION}
           ${BLOG_CONTENT}
           ${BLOG_MARKDOWN}
           ${BANNER}

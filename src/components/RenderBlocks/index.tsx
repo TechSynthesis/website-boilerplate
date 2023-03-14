@@ -26,10 +26,12 @@ import { LinkGrid } from '@blocks/LinkGrid'
 import { ReusableContentBlock } from '@blocks/ReusableContent'
 import { FeatureGrid } from '@blocks/FeatureGrid'
 import { ProductFeatures } from '@blocks/ProductFeatures'
+import { Accordion } from '@blocks/Accordion'
 
 type ReusableContentBlockType = Extract<Page['layout'][0], { blockType: 'reusableContentBlock' }>
 
 const blockComponents = {
+  accordion: Accordion,
   banner: BannerBlock,
   blogContent: BlogContent,
   blogMarkdown: BlogMarkdown,
